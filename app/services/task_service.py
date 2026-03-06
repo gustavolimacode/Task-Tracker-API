@@ -23,7 +23,7 @@ def mark_as_done_service(task_id: int):
             if task['done']:
                 raise HTTPException(status_code=400, detail="Task já foi concluída")
             task['done'] = True
-            return {"message": "Task marcada como concluída"}
+            return task
     raise HTTPException(status_code=404, detail="Task não encontrada")
 
 def delete_task_service(task_id: int) -> Task:
