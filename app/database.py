@@ -1,2 +1,0 @@
-tasks = []
-next_id = 1
